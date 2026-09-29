@@ -1,63 +1,36 @@
-import java.util.HashMap;
-
-public class Solution {
-    public static String minWindow(String s, String t) {
-        if (s == null || t == null || s.length() < t.length()) {
+class Solution {
+    public String minWindow(String s, String t) {
+        if (t.length()>s.length())
             return "";
-        }
-
-        // Array to store the required frequencies of characters in t
-        int[] targetCounts = new int[128];
-        for (char c : t.toCharArray()) {
-            targetCounts[c]++;
-        }
-
-        // Array to store the character counts in the current sliding window
-        int[] windowCounts = new int[128];
-
-        // Track how many unique characters have met their target frequency requirement
-        int required = 0;
-        for (int count : targetCounts) {
-            if (count > 0) required++;
-        }
-
-        int formed = 0;
-        int left = 0;
-        
-        // Track the best window dimensions: [length, start_index]
-        int minLen = Integer.MAX_VALUE;
-        int minStart = 0;
-
-        // Expand the window using the right pointer
-        for (int right = 0; right < s.length(); right++) {
-            char rightChar = s.charAt(right);
-            windowCounts[rightChar]++;
-
-            // If the character matches the required frequency in t, increment formed
-            if (targetCounts[rightChar] > 0 && windowCounts[rightChar] == targetCounts[rightChar]) {
-                formed++;
-            }
-
-            // Shrink the window from the left while it remains valid
-            while (left <= right && formed == required) {
-                // Update the minimum window if a smaller one is found
-                if (right - left + 1 < minLen) {
-                    minLen = right - left + 1;
-                    minStart = left;
+        int required=t.length();
+        int left=0,right=0,start=0;
+        int freq[]=new int[128];
+        int minlength=Integer.MAX_VALUE;
+        for (int i=0;i<t.length();i++)
+            freq[t.charAt(i)]++;
+        while (right<s.length())
+        {
+            char ch=s.charAt(right);
+            if (freq[ch]>0)
+                required--;
+            freq[ch]--;
+            right++;
+            while (required==0)
+            {
+                if (right-left<minlength)
+                {
+                    minlength=right-left;
+                    start=left;
                 }
-
-                char leftChar = s.charAt(left);
-                windowCounts[leftChar]--;
-
-                // If removing this character breaks the target requirement, decrement formed
-                if (targetCounts[leftChar] > 0 && windowCounts[leftChar] < targetCounts[leftChar]) {
-                    formed--;
-                }
-
+                char leftchar=s.charAt(left);
+                freq[leftchar]++;
+                if (freq[leftchar]>0)
+                    required++;
                 left++;
             }
         }
-
-        return minLen == Integer.MAX_VALUE ? "" : s.substring(minStart, minStart + minLen);
+        if (minlength==Integer.MAX_VALUE)
+            return "";
+        return s.substring(start,start+minlength);
     }
 }
