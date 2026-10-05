@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview!
 | [0238-product-of-array-except-self](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0238-product-of-array-except-self) |
 | [0239-sliding-window-maximum](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0239-sliding-window-maximum) |
 | [0739-daily-temperatures](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0739-daily-temperatures) |
+| [0853-car-fleet](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0853-car-fleet) |
 ## Hash Table
 |  |
 | ------- |
@@ -48,6 +49,7 @@ A collection of LeetCode questions to ace the coding interview!
 | [0015-3sum](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0217-contains-duplicate) |
+| [0853-car-fleet](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0853-car-fleet) |
 ## Prefix Sum
 |  |
 | ------- |
@@ -99,11 +101,13 @@ A collection of LeetCode questions to ace the coding interview!
 | [0150-evaluate-reverse-polish-notation](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0155-min-stack) |
 | [0739-daily-temperatures](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0739-daily-temperatures) |
+| [0853-car-fleet](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0853-car-fleet) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0042-trapping-rain-water) |
 | [0739-daily-temperatures](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0739-daily-temperatures) |
+| [0853-car-fleet](https://github.com/zafarjamal99/My-LeetCode-Journey/tree/master/0853-car-fleet) |
 ## Sliding Window
 |  |
 | ------- |
